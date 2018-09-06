@@ -11,20 +11,20 @@ public class Vetor {
     }
 
     //Forma muito custosa de adição de elementos.
-    /*public void adiciona(String elemento){
+    public void adicionaElementos(String elemento){
         for (int i=0; i<this.elementos.length; i++){
             if (this.elementos[i] == null){
                 this.elementos[i] = elemento;
                 break;
             }
         }
-    }*/
+    }
 
 
 
     //Alternativa ao lançamento de Exception
 
-    /*public boolean adiciona(String elemento){
+    public boolean adicionaElemento(String elemento){
 
         if (this.tamamanho < this.elementos.length){
             this.elementos[this.tamamanho] = elemento;
@@ -35,8 +35,9 @@ public class Vetor {
             return false;
         }
 
-    }*/
+    }
 
+    //Validação e Exception para o tamanho do vetor.
     public void adiciona(String elemento) throws Exception{
 
         if (this.tamamanho < this.elementos.length){
