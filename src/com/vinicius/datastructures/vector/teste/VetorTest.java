@@ -22,10 +22,12 @@ public class VetorTest {
         vetor.adicionaElemento(("elemento 4"));
 
 
-        System.out.println(vetor.getTamamanho());
-        System.out.println(vetor);
 
-        
+
+        System.out.println(vetor.getTamamanho());
+        System.out.println(vetor.busca(3));
+
+
     }
 
 
