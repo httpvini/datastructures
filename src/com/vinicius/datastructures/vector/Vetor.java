@@ -57,6 +57,15 @@ public class Vetor {
         }
     }
 
+    public int busca(String elemento){
+        for(int i = 0; i<this.tamamanho; i++){
+            if(this.elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public int getTamamanho() {
         return tamamanho;
     }

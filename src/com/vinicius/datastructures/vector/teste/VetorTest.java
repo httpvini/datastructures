@@ -26,7 +26,7 @@ public class VetorTest {
 
         System.out.println(vetor.getTamamanho());
         System.out.println(vetor.busca(3));
-
+        System.out.println(vetor.busca("elemento 2"));
 
     }
 
