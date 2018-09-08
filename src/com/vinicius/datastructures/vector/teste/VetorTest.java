@@ -7,7 +7,7 @@ public class VetorTest {
 
     public static void main(String[] args) {
 
-        Vetor vetor = new Vetor(10);
+        Vetor vetor = new Vetor(2);
 
         //Ao chamar o método adiciona, é necessário circudá-lo com try-catch
         try {

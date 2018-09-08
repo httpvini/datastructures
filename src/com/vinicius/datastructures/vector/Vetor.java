@@ -14,6 +14,8 @@ public class Vetor {
 
     //Forma muito custosa de adição de elementos.
     public void adicionaElementos(String elemento){
+
+        this.aumentaCapacidade();
         for (int i=0; i<this.elementos.length; i++){
             if (this.elementos[i] == null){
                 this.elementos[i] = elemento;
@@ -26,6 +28,7 @@ public class Vetor {
 
     public boolean adicionaElemento(String elemento){
 
+        this.aumentaCapacidade();
         if (this.tamamanho < this.elementos.length){
             this.elementos[this.tamamanho] = elemento;
             this.tamamanho++;
@@ -40,6 +43,7 @@ public class Vetor {
     //Validação e Exception para o tamanho do vetor.
     public void adiciona(String elemento) throws Exception{
 
+        this.aumentaCapacidade();
         if (this.tamamanho < this.elementos.length){
             this.elementos[this.tamamanho] = elemento;
             this.tamamanho++;
@@ -69,6 +73,8 @@ public class Vetor {
     //adiciona elemento em qualquer posicao;
     public void adiciona(int posicao, String elemento){
 
+        this.aumentaCapacidade();
+
         if (!(posicao >=0 && posicao < this.tamamanho)){
             throw new IllegalArgumentException("índice inválido");
         }
@@ -80,6 +86,15 @@ public class Vetor {
         this.tamamanho++;
     }
 
+    private void aumentaCapacidade(){
+        if (this.tamamanho == this.elementos.length){
+            String[] elementosNovos = new String[this.elementos.length * 2];
+            for (int i = 0; i<this.tamamanho; i++){
+                elementosNovos[i] = this.elementos[i];
+            }
+            this.elementos = elementosNovos;
+        }
+    }
 
     public int getTamamanho() {
         return tamamanho;
