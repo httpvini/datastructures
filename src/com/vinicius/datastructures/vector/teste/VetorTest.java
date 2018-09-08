@@ -21,12 +21,13 @@ public class VetorTest {
         vetor.adicionaElemento("elemento 3");
         vetor.adicionaElemento(("elemento 4"));
 
-
-
+        //adicao de elemento em qualquer posicao do vetor
+        vetor.adiciona(0, "novo elemento");
 
         System.out.println(vetor.getTamamanho());
         System.out.println(vetor.busca(3));
         System.out.println(vetor.busca("elemento 2"));
+        System.out.println(vetor);
 
     }
 

@@ -66,6 +66,21 @@ public class Vetor {
         return -1;
     }
 
+    //adiciona elemento em qualquer posicao;
+    public void adiciona(int posicao, String elemento){
+
+        if (!(posicao >=0 && posicao < this.tamamanho)){
+            throw new IllegalArgumentException("índice inválido");
+        }
+        //mover todos os elementos
+        for (int i = this.tamamanho - 1; i >= posicao; i--){
+            this.elementos[i+1] = this.elementos[i];
+        }
+        this.elementos[posicao] = elemento;
+        this.tamamanho++;
+    }
+
+
     public int getTamamanho() {
         return tamamanho;
     }
