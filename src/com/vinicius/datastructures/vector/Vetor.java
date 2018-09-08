@@ -1,5 +1,7 @@
 package com.vinicius.datastructures.vector;
 
+import java.util.Arrays;
+
 public class Vetor {
 
     private String[] elementos;
@@ -19,8 +21,6 @@ public class Vetor {
             }
         }
     }
-
-
 
     //Alternativa ao lançamento de Exception
 
@@ -48,4 +48,30 @@ public class Vetor {
         }
 
     }
+
+    public int getTamamanho() {
+        return tamamanho;
+    }
+
+
+    public String toString(){
+
+        StringBuilder s = new StringBuilder();
+
+        s.append("[");
+
+        for (int i=0; i<this.tamamanho-1; i++){
+            s.append(this.elementos[i]);
+            s.append(", ");
+        }
+
+        if (this.tamamanho>0){
+            s.append(this.elementos[this.tamamanho-1]);
+        }
+
+        s.append("]");
+
+        return s.toString();
+    }
+
 }
